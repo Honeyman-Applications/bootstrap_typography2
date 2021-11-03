@@ -1,3 +1,7 @@
+## 1.2.2
+
+- Added git repo
+
 ## 1.2.1
 
 - bootstrap_like_breakpoints: ^0.2.0
