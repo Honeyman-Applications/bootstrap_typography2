@@ -14,7 +14,7 @@
   ### YAML:
   ```yaml
   dependencies:
-    bootstrap_typography2: ^1.2.1
+    bootstrap_typography2: ^1.3.0
     
   ```
   ### Dart:
