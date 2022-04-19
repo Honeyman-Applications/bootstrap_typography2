@@ -4,7 +4,7 @@ import 'package:bootstrap_typography2/src/selectables/h1s.dart';
 
 /// The widget used to return a H4
 class H4S extends H1S {
-  const H4S(BSSelectableTextParams data, {Key? key, required})
+  const H4S(BSSelectParams data, {Key? key, required})
       : super(
           data,
           key: key,

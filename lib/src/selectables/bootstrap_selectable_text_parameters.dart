@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 /// Class used to pass data to bootstrap typography widgets
 /// at min text is the only param required.
 /// Only for selectable versions
-class BSSelectableTextParams {
+class BSSelectParams {
   final String text;
 
   double textSizeSmall;
@@ -64,7 +64,7 @@ class BSSelectableTextParams {
   final TextBaseline? textBaseline;
   final double? wordSpacing;
 
-  BSSelectableTextParams(
+  BSSelectParams(
     this.text, {
     this.textSizeSmall = -1,
     this.textSizeLarge = -1,

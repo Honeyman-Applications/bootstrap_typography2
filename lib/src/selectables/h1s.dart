@@ -5,7 +5,7 @@ import 'package:bootstrap_like_breakpoints/bootstrap_like_breakpoints.dart';
 /// H1S, all classes are children of this widget
 /// Displays text is a H1 bootstrap style
 class H1S extends StatefulWidget {
-  final BSSelectableTextParams data;
+  final BSSelectParams data;
 
   const H1S(
     this.data, {

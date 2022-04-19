@@ -4,7 +4,7 @@ import 'package:bootstrap_typography2/src/selectables/h1s.dart';
 
 /// The widget used to return a H5
 class H5S extends H1S {
-  const H5S(BSSelectableTextParams data, {Key? key, required})
+  const H5S(BSSelectParams data, {Key? key, required})
       : super(
           data,
           key: key,
