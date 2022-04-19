@@ -22,7 +22,8 @@ class H1S extends StatefulWidget {
 class H1SState extends State<H1S> {
   /// this function should only be called by the children of this class
   /// used to pass params to the text widget returned by all widgets in this library
-  SelectableText getTextObjectWithFontSizes(BuildContext context, String textType) {
+  SelectableText getTextObjectWithFontSizes(
+      BuildContext context, String textType) {
     return SelectableText(
       widget.data.text,
       onTap: widget.data.onTap,

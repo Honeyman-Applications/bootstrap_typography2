@@ -22,7 +22,8 @@ class BSSelectParams {
   final FocusNode? focusNode;
   final int? maxLines;
   final int? minLines;
-  final void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged;
+  final void Function(TextSelection, SelectionChangedCause?)?
+      onSelectionChanged;
   final ScrollPhysics? scrollPhysics;
   final TextSelectionControls? selectionControls;
   final BoxHeightStyle selectionHeightStyle;
