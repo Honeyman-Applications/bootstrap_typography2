@@ -12,6 +12,7 @@
     - not needed
 - changed ```createState``` return type for all widgets to that widget's state
 - added ```dev_dependencies``` and ```uses-material-design: true``` to ```pubspec.yaml``` files
+- updated example readme
 
 ## 1.2.2
 
