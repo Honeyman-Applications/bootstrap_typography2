@@ -24,7 +24,8 @@ class H1 extends StatefulWidget {
 
 /// Displays text is a H1 bootstrap style
 class H1State extends State<H1> {
-  Text _regular(BuildContext context, String textType) {
+  /// returns a text object, textData must not be null if this is called
+  Text _text(BuildContext context, String textType) {
     return Text(
       widget.textData!.text,
       textAlign: widget.textData!.textAlignment,
@@ -74,6 +75,7 @@ class H1State extends State<H1> {
     );
   }
 
+  /// returns a selectable object, selectData must not be null if this is called
   SelectableText _selectable(BuildContext context, String textType) {
     return SelectableText(
       widget.selectData!.text,
@@ -153,7 +155,7 @@ class H1State extends State<H1> {
 
     // return text or selectable
     if (widget.textData != null) {
-      return _regular(context, textType);
+      return _text(context, textType);
     } else {
       return _selectable(context, textType);
     }

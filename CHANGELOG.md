@@ -1,3 +1,10 @@
+## 2.0.0
+
+- Now can make text selectable, or regular based on data object passed
+    - ```BSSelectParams``` for selectable text
+    - ```BSTextParams``` for regular text
+- consolidated code, removed selectable versions of widgets
+
 ## 1.3.0
 
 - increased tracked files in git repo
