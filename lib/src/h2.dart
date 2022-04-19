@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
-import 'h1.dart';
-import 'bootstrap_text_parameters.dart';
+import 'package:bootstrap_typography2/src/h1.dart';
+import 'package:bootstrap_typography2/src/bootstrap_text_parameters.dart';
+import 'package:bootstrap_typography2/src/bootstrap_selectable_text_parameters.dart';
 
 /// The widget used to return a H2
 class H2 extends H1 {
-  const H2(BSTextParams data, {Key? key, required})
+  const H2({
+    BSTextParams? textData,
+    BSSelectParams? selectData,
+    Key? key,
+  })
       : super(
-          data,
+          textData: textData,
+          selectData: selectData,
           key: key,
         );
 
