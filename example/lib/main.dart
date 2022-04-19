@@ -42,26 +42,26 @@ void main() {
                 BSSelectableTextParams("H1S"),
               ),
               H2S(
-                BSSelectableTextParams("H2"),
+                BSSelectableTextParams("H2S"),
               ),
               H3S(
-                BSSelectableTextParams("H3"),
+                BSSelectableTextParams("H3S"),
               ),
               H4S(
-                BSSelectableTextParams("H4"),
+                BSSelectableTextParams("H4S"),
               ),
               H5S(
-                BSSelectableTextParams("H5"),
+                BSSelectableTextParams("H5S"),
               ),
               H6S(
-                BSSelectableTextParams("H6"),
+                BSSelectableTextParams("H6S"),
               ),
               PS(
-                BSSelectableTextParams("P"),
+                BSSelectableTextParams("PS"),
               ),
               H2S(
                 BSSelectableTextParams(
-                  "Custom",
+                  "Custom Selectable",
                   textSizeSmall: 16,
                   textSizeLarge: 82,
                 ),
