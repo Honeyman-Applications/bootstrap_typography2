@@ -11,19 +11,12 @@ class H2 extends H1 {
         );
 
   @override
-  H1State createState() {
+  _H2State createState() {
     return _H2State();
   }
 }
 
 class _H2State extends H1State {
-  @override
-  initState() {
-    super.initState();
-    super.small = widget.data.textSizeSmall;
-    super.large = widget.data.textSizeLarge;
-  }
-
   /// returns the Text widget, and this is were the small and large
   /// text values are specified
   @override

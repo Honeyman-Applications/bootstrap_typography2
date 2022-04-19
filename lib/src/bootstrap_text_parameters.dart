@@ -40,6 +40,7 @@ class BSTextParams {
   final TextHeightBehavior? textHeightBehavior;
   final double? textScaleFactor;
   final TextWidthBasis? textWidthBasis;
+  final Key? textKey;
 
   /// text is the only required param
   BSTextParams(
@@ -79,5 +80,6 @@ class BSTextParams {
     this.textHeightBehavior,
     this.textScaleFactor,
     this.textWidthBasis,
+    this.textKey,
   });
 }

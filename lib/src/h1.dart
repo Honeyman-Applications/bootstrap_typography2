@@ -21,16 +21,6 @@ class H1 extends StatefulWidget {
 
 /// Displays text is a H1 bootstrap style
 class H1State extends State<H1> {
-  late double small;
-  late double large;
-
-  @override
-  initState() {
-    super.initState();
-    small = widget.data.textSizeSmall;
-    large = widget.data.textSizeLarge;
-  }
-
   /// this function should only be called by the children of this class
   /// used to pass params to the text widget returned by all widgets in this library
   Text getTextObjectWithFontSizes(BuildContext context, String textType) {
@@ -45,6 +35,9 @@ class H1State extends State<H1> {
       textHeightBehavior: widget.data.textHeightBehavior,
       textScaleFactor: widget.data.textScaleFactor,
       textWidthBasis: widget.data.textWidthBasis,
+      overflow: widget.data.overflow,
+      locale: widget.data.locale,
+      key: widget.data.textKey,
       style: TextStyle(
         color: widget.data.color,
         fontWeight: widget.data.weight,
@@ -73,8 +66,8 @@ class H1State extends State<H1> {
         fontSize: BSBreakPoints.getTextFontSize(
           context,
           textType,
-          small: small,
-          large: large,
+          small: widget.data.textSizeSmall,
+          large: widget.data.textSizeLarge,
         ),
       ),
     );
