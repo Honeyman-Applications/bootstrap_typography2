@@ -44,3 +44,13 @@ export 'package:bootstrap_typography2/src/h3.dart';
 export 'package:bootstrap_typography2/src/h4.dart';
 export 'package:bootstrap_typography2/src/h5.dart';
 export 'package:bootstrap_typography2/src/h6.dart';
+
+/// p, h1 - h6 exports selectable versions
+export 'package:bootstrap_typography2/src/selectables/bootstrap_selectable_text_parameters.dart';
+export 'package:bootstrap_typography2/src/selectables/h1s.dart';
+export 'package:bootstrap_typography2/src/selectables/h2s.dart';
+export 'package:bootstrap_typography2/src/selectables/h3s.dart';
+export 'package:bootstrap_typography2/src/selectables/h4s.dart';
+export 'package:bootstrap_typography2/src/selectables/h5s.dart';
+export 'package:bootstrap_typography2/src/selectables/h6s.dart';
+export 'package:bootstrap_typography2/src/selectables/ps.dart';
