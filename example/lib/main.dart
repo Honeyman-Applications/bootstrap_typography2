@@ -39,28 +39,28 @@ void main() {
               ),
               // Selectables
               H1S(
-                BSSelectableTextParams("H1S"),
+                BSSelectParams("H1S"),
               ),
               H2S(
-                BSSelectableTextParams("H2S"),
+                BSSelectParams("H2S"),
               ),
               H3S(
-                BSSelectableTextParams("H3S"),
+                BSSelectParams("H3S"),
               ),
               H4S(
-                BSSelectableTextParams("H4S"),
+                BSSelectParams("H4S"),
               ),
               H5S(
-                BSSelectableTextParams("H5S"),
+                BSSelectParams("H5S"),
               ),
               H6S(
-                BSSelectableTextParams("H6S"),
+                BSSelectParams("H6S"),
               ),
               PS(
-                BSSelectableTextParams("PS"),
+                BSSelectParams("PS"),
               ),
               H2S(
-                BSSelectableTextParams(
+                BSSelectParams(
                   "Custom Selectable",
                   textSizeSmall: 16,
                   textSizeLarge: 82,
