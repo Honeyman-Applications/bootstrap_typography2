@@ -1,3 +1,18 @@
+## 1.3.0
+
+- increased tracked files in git repo
+- example ```pubspec.yaml``` will now
+    - always point to current version of the package
+    - not be published
+- added ```SelectableText``` versions of params and text
+- added ```overflow, locale``` to ```getTextObjectWithFontSizes```
+    - the options were missing, but available in ```BSTextParams```
+- added key option for text
+- removed ```initState```code from all text widgets
+    - not needed
+- changed ```createState``` return type for all widgets to that widget's state
+- added ```dev_dependencies``` and ```uses-material-design: true``` to ```pubspec.yaml``` files
+
 ## 1.2.2
 
 - Added git repo
