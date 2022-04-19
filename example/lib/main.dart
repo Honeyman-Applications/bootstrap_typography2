@@ -10,58 +10,58 @@ void main() {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               H1(
-                BSTextParams("H1"),
+                textData: BSTextParams("H1"),
               ),
               H2(
-                BSTextParams("H2"),
+                textData: BSTextParams("H2"),
               ),
               H3(
-                BSTextParams("H3"),
+                textData: BSTextParams("H3"),
               ),
               H4(
-                BSTextParams("H4"),
+                textData: BSTextParams("H4"),
               ),
               H5(
-                BSTextParams("H5"),
+                textData: BSTextParams("H5"),
               ),
               H6(
-                BSTextParams("H6"),
+                textData: BSTextParams("H6"),
               ),
               P(
-                BSTextParams("P"),
+                textData: BSTextParams("P"),
               ),
               H2(
-                BSTextParams(
+                textData: BSTextParams(
                   "Custom",
                   textSizeSmall: 16,
                   textSizeLarge: 82,
                 ),
               ),
-              // Selectables
-              H1S(
-                BSSelectParams("H1S"),
+              //
+              H1(
+                selectData: BSSelectParams("H1"),
               ),
-              H2S(
-                BSSelectParams("H2S"),
+              H2(
+                selectData: BSSelectParams("H2"),
               ),
-              H3S(
-                BSSelectParams("H3S"),
+              H3(
+                selectData: BSSelectParams("H3"),
               ),
-              H4S(
-                BSSelectParams("H4S"),
+              H4(
+                selectData: BSSelectParams("H4"),
               ),
-              H5S(
-                BSSelectParams("H5S"),
+              H5(
+                selectData: BSSelectParams("H5"),
               ),
-              H6S(
-                BSSelectParams("H6S"),
+              H6(
+                selectData: BSSelectParams("H6"),
               ),
-              PS(
-                BSSelectParams("PS"),
+              P(
+                selectData: BSSelectParams("P"),
               ),
-              H2S(
-                BSSelectParams(
-                  "Custom Selectable",
+              H2(
+                selectData: BSSelectParams(
+                  "Custom",
                   textSizeSmall: 16,
                   textSizeLarge: 82,
                 ),
