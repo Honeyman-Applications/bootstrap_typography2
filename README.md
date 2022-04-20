@@ -14,7 +14,7 @@
   ### YAML:
   ```yaml
   dependencies:
-    bootstrap_typography2: ^1.3.0
+    bootstrap_typography2: ^2.0.0
     
   ```
   ### Dart:
@@ -26,11 +26,11 @@
 
   ### Simple Examples:
   ```dart
-  P(BSTextParams("Hello World!"));
+  P(textData: BSTextParams("Hello World!"));
   ```
   ```dart
   H1(
-    BSTextParams(
+    textData: BSTextParams(
         "Picture",
         weight: FontWeight.bold,
         textAlignment: TextAlign.center,
@@ -39,7 +39,7 @@
   ```
   ```dart
 H2(
-    BSTextParams(
+    textData: BSTextParams(
       "Custom",
       textSizeSmall: 16,
       textSizeLarge: 82,
@@ -48,11 +48,11 @@ H2(
   ```
 ### Simple Selectable Examples:
 ```dart
-H1S(BSSelectParams("H1S"));
+P(selectData: BSSelectParams("H1S"));
 ```
   ```dart
-  H1S(
-    BSSelectParams(
+  H1(
+    selectData: BSSelectParams(
         "Picture",
         weight: FontWeight.bold,
         textAlignment: TextAlign.center,
@@ -60,8 +60,8 @@ H1S(BSSelectParams("H1S"));
   );
   ```
   ```dart
-H2S(
-    BSSelectParams(
+H2(
+    selectData: BSSelectParams(
       "Custom",
       textSizeSmall: 16,
       textSizeLarge: 82,
@@ -70,126 +70,126 @@ H2S(
   ```
 
   ## Supports:
+  Can't pass both ```textData:``` and ```selectData:```
+  <br />
+
+  Must pass one: ```textData:``` or ```selectData:```
+  
   ### Regular Text:
-  - ```p = P(BSTextParams),```
-  - ```h1 = H1(BSTextParams),```
-  - ```h2 = H2(BSTextParams),```
-  - ```h3 = H3(BSTextParams),```
-  - ```h4 = H4(BSTextParams),```
-  - ```h5 = H5(BSTextParams),```
-  - ```h6 = H6(BSTextParams),```
+  - p = ```P(textData: BSTextParams),```
+  - h1 = ```H1(textData: BSTextParams),```
+  - h2 = ```H2(textData: BSTextParams),```
+  - h3 = ```H3(textData: BSTextParams),```
+  - h4 = ```H4(textData: BSTextParams),```
+  - h5 = ```H5(textData: BSTextParams),```
+  - h6 = ```H6(textData: BSTextParams),```
   ### Selectable Text:
-  - ```ps = PS(BSSelectParams),```
-  - ```hs1 = HS1(BSSelectParams),```
-  - ```hs2 = HS2(BSSelectParams),```
-  - ```hs3 = HS3(BSSelectParams),```
-  - ```hs4 = HS4(BSSelectParams),```
-  - ```hs5 = HS5(BSSelectParams),```
-  - ```hs6 = HS6(BSSelectParams),```
+  - p selectable = ```PS(selectData: BSSelectParams),```
+  - h1 selectable = ```HS1(selectData: BSSelectParams),```
+  - h2 selectable = ```HS2(selectData: BSSelectParams),```
+  - h3 selectable = ```HS3(selectData: BSSelectParams),```
+  - h4 selectable = ```HS4(selectData: BSSelectParams),```
+  - h5 selectable = ```HS5(selectData: BSSelectParams),```
+  - h6 selectable = ```HS6(selectData: BSSelectParams),```
   ## Can Set Text Parameters Using BSTextParams:
   ### Regular Text:
 ```dart
-  final String text;
-
   double textSizeSmall;
   double textSizeLarge;
-  
-  final TextAlign? textAlignment;
-  final Color? color;
-  final FontWeight? weight;
-  final FontStyle? fontStyle;
-  final TextDecoration? textDecoration;
-  final double? height;
-  final Paint? background;
-  final Color? backgroundColor;
-  final Color? decorationColor;
-  final TextDecorationStyle? decorationStyle;
-  final double? decorationThickness;
-  final String? fontFamily;
-  final List<String>? fontFamilyFallback;
-  final List<FontFeature>? fontFeatures;
-  final String? debugLabel;
-  final Paint? foreground;
-  final bool inherit;
-  final TextLeadingDistribution? leadingDistribution;
-  final double? letterSpacing;
-  final Locale? locale;
-  final TextOverflow? overflow;
-  final String? package;
-  final List<Shadow>? shadows;
-  final TextBaseline? textBaseline;
-  final double? wordSpacing;
-  final int? maxLines;
-  final String? semanticsLabel;
-  final bool? softWrap;
-  final StrutStyle? strutStyle;
-  final TextDirection? textDirection;
-  final TextHeightBehavior? textHeightBehavior;
-  final double? textScaleFactor;
-  final TextWidthBasis? textWidthBasis;
-  final Key? textKey;
-
+  String text;
+  TextAlign? textAlignment;
+  Color? color;
+  FontWeight? weight;
+  FontStyle? fontStyle;
+  TextDecoration? textDecoration;
+  double? height;
+  Paint? background;
+  Color? backgroundColor;
+  Color? decorationColor;
+  TextDecorationStyle? decorationStyle;
+  double? decorationThickness;
+  String? fontFamily;
+  List<String>? fontFamilyFallback;
+  List<FontFeature>? fontFeatures;
+  String? debugLabel;
+  Paint? foreground;
+  bool inherit;
+  TextLeadingDistribution? leadingDistribution;
+  double? letterSpacing;
+  Locale? locale;
+  TextOverflow? overflow;
+  String? package;
+  List<Shadow>? shadows;
+  TextBaseline? textBaseline;
+  double? wordSpacing;
+  int? maxLines;
+  String? semanticsLabel;
+  bool? softWrap;
+  StrutStyle? strutStyle;
+  TextDirection? textDirection;
+  TextHeightBehavior? textHeightBehavior;
+  double? textScaleFactor;
+  TextWidthBasis? textWidthBasis;
+  Key? textKey;
 ```
 ## Can Set Text Parameters Using BSSelectParams:
 ### Selectable Text:
 ``` dart
-  final String text;
-
+  String text;
   double textSizeSmall;
   double textSizeLarge;
-
-  final void Function()? onTap;
-  final bool autofocus;
-  final Color? cursorColor;
-  final double? cursorHeight;
-  final Radius? cursorRadius;
-  final double cursorWidth;
-  final DragStartBehavior dragStartBehavior;
-  final bool enableInteractiveSelection;
-  final FocusNode? focusNode;
-  final int? maxLines;
-  final int? minLines;
-  final void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged;
-  final ScrollPhysics? scrollPhysics;
-  final TextSelectionControls? selectionControls;
-  final BoxHeightStyle selectionHeightStyle;
-  final BoxWidthStyle selectionWidthStyle;
-  final String? semanticsLabel;
-  final bool showCursor;
-  final StrutStyle? strutStyle;
-  final TextAlign? textAlign;
-  final TextDirection? textDirection;
-  final TextHeightBehavior? textHeightBehavior;
-  final double? textScaleFactor;
-  final TextWidthBasis? textWidthBasis;
-  final ToolbarOptions? toolbarOptions;
-  final Key? textKey;
+  void Function()? onTap;
+  bool autofocus;
+  Color? cursorColor;
+  double? cursorHeight;
+  Radius? cursorRadius;
+  double cursorWidth;
+  DragStartBehavior dragStartBehavior;
+  bool enableInteractiveSelection;
+  FocusNode? focusNode;
+  int? maxLines;
+  int? minLines;
+  void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged;
+  ScrollPhysics? scrollPhysics;
+  TextSelectionControls? selectionControls;
+  BoxHeightStyle selectionHeightStyle;
+  BoxWidthStyle selectionWidthStyle;
+  String? semanticsLabel;
+  bool showCursor;
+  StrutStyle? strutStyle;
+  TextAlign? textAlign;
+  TextDirection? textDirection;
+  TextHeightBehavior? textHeightBehavior;
+  double? textScaleFactor;
+  TextWidthBasis? textWidthBasis;
+  ToolbarOptions? toolbarOptions;
+  Key? textKey;
 
   // styles
-  final Color? color;
-  final Paint? background;
-  final Color? backgroundColor;
-  final String? debugLabel;
-  final TextDecoration? decoration;
-  final Color? decorationColor;
-  final TextDecorationStyle? decorationStyle;
-  final double? decorationThickness;
-  final String? fontFamily;
-  final List<String>? fontFamilyFallback;
-  final List<FontFeature>? fontFeatures;
-  final FontStyle? fontStyle;
-  final FontWeight? fontWeight;
-  final Paint? foreground;
-  final double? height;
-  final bool inherit;
-  final TextLeadingDistribution? leadingDistribution;
-  final double? letterSpacing;
-  final Locale? locale;
-  final TextOverflow? overflow;
-  final String? package;
-  final List<Shadow>? shadows;
-  final TextBaseline? textBaseline;
-  final double? wordSpacing;
+  Color? color;
+  Paint? background;
+  Color? backgroundColor;
+  String? debugLabel;
+  TextDecoration? decoration;
+  Color? decorationColor;
+  TextDecorationStyle? decorationStyle;
+  double? decorationThickness;
+  String? fontFamily;
+  List<String>? fontFamilyFallback;
+  List<FontFeature>? fontFeatures;
+  FontStyle? fontStyle;
+  FontWeight? fontWeight;
+  Paint? foreground;
+  double? height;
+  bool inherit;
+  TextLeadingDistribution? leadingDistribution;
+  double? letterSpacing;
+  Locale? locale;
+  TextOverflow? overflow;
+  String? package;
+  List<Shadow>? shadows;
+  TextBaseline? textBaseline;
+  double? wordSpacing;
 ```
 
 ## Text Sizes:
