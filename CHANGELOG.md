@@ -4,6 +4,9 @@
     - ```BSSelectParams``` for selectable text
     - ```BSTextParams``` for regular text
 - consolidated code, removed selectable versions of widgets
+- removed ```final``` from fields in params objects
+    - this way dynamic changes to text can be performed easier
+- removed homepage from yaml
 
 ## 1.3.0
 

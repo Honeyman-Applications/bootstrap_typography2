@@ -6,64 +6,61 @@ import 'package:flutter/material.dart';
 /// at min text is the only param required.
 /// Only for selectable versions
 class BSSelectParams {
-  final String text;
-
+  String text;
   double textSizeSmall;
   double textSizeLarge;
-
-  final void Function()? onTap;
-  final bool autofocus;
-  final Color? cursorColor;
-  final double? cursorHeight;
-  final Radius? cursorRadius;
-  final double cursorWidth;
-  final DragStartBehavior dragStartBehavior;
-  final bool enableInteractiveSelection;
-  final FocusNode? focusNode;
-  final int? maxLines;
-  final int? minLines;
-  final void Function(TextSelection, SelectionChangedCause?)?
-      onSelectionChanged;
-  final ScrollPhysics? scrollPhysics;
-  final TextSelectionControls? selectionControls;
-  final BoxHeightStyle selectionHeightStyle;
-  final BoxWidthStyle selectionWidthStyle;
-  final String? semanticsLabel;
-  final bool showCursor;
-  final StrutStyle? strutStyle;
-  final TextAlign? textAlign;
-  final TextDirection? textDirection;
-  final TextHeightBehavior? textHeightBehavior;
-  final double? textScaleFactor;
-  final TextWidthBasis? textWidthBasis;
-  final ToolbarOptions? toolbarOptions;
-  final Key? textKey;
+  void Function()? onTap;
+  bool autofocus;
+  Color? cursorColor;
+  double? cursorHeight;
+  Radius? cursorRadius;
+  double cursorWidth;
+  DragStartBehavior dragStartBehavior;
+  bool enableInteractiveSelection;
+  FocusNode? focusNode;
+  int? maxLines;
+  int? minLines;
+  void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged;
+  ScrollPhysics? scrollPhysics;
+  TextSelectionControls? selectionControls;
+  BoxHeightStyle selectionHeightStyle;
+  BoxWidthStyle selectionWidthStyle;
+  String? semanticsLabel;
+  bool showCursor;
+  StrutStyle? strutStyle;
+  TextAlign? textAlign;
+  TextDirection? textDirection;
+  TextHeightBehavior? textHeightBehavior;
+  double? textScaleFactor;
+  TextWidthBasis? textWidthBasis;
+  ToolbarOptions? toolbarOptions;
+  Key? textKey;
 
   // styles
-  final Color? color;
-  final Paint? background;
-  final Color? backgroundColor;
-  final String? debugLabel;
-  final TextDecoration? decoration;
-  final Color? decorationColor;
-  final TextDecorationStyle? decorationStyle;
-  final double? decorationThickness;
-  final String? fontFamily;
-  final List<String>? fontFamilyFallback;
-  final List<FontFeature>? fontFeatures;
-  final FontStyle? fontStyle;
-  final FontWeight? fontWeight;
-  final Paint? foreground;
-  final double? height;
-  final bool inherit;
-  final TextLeadingDistribution? leadingDistribution;
-  final double? letterSpacing;
-  final Locale? locale;
-  final TextOverflow? overflow;
-  final String? package;
-  final List<Shadow>? shadows;
-  final TextBaseline? textBaseline;
-  final double? wordSpacing;
+  Color? color;
+  Paint? background;
+  Color? backgroundColor;
+  String? debugLabel;
+  TextDecoration? decoration;
+  Color? decorationColor;
+  TextDecorationStyle? decorationStyle;
+  double? decorationThickness;
+  String? fontFamily;
+  List<String>? fontFamilyFallback;
+  List<FontFeature>? fontFeatures;
+  FontStyle? fontStyle;
+  FontWeight? fontWeight;
+  Paint? foreground;
+  double? height;
+  bool inherit;
+  TextLeadingDistribution? leadingDistribution;
+  double? letterSpacing;
+  Locale? locale;
+  TextOverflow? overflow;
+  String? package;
+  List<Shadow>? shadows;
+  TextBaseline? textBaseline;
+  double? wordSpacing;
 
   BSSelectParams(
     this.text, {
