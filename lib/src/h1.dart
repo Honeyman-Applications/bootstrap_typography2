@@ -145,12 +145,14 @@ class H1State extends State<H1> {
   Widget getTextObjectWithFontSizes(BuildContext context, String textType) {
     // make sure one params object is passed
     if (widget.textData == null && widget.selectData == null) {
-      throw const FormatException("Must pass either a BSTextParams, or BSSelectParams");
+      throw const FormatException(
+          "Must pass either a BSTextParams, or BSSelectParams");
     }
 
     // make sure both are not passed
     if (widget.textData != null && widget.selectData != null) {
-      throw const FormatException("Can't pass both BSTextParams, and BSSelectParams");
+      throw const FormatException(
+          "Can't pass both BSTextParams, and BSSelectParams");
     }
 
     // return text or selectable

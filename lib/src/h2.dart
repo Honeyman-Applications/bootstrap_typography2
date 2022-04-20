@@ -9,8 +9,7 @@ class H2 extends H1 {
     BSTextParams? textData,
     BSSelectParams? selectData,
     Key? key,
-  })
-      : super(
+  }) : super(
           textData: textData,
           selectData: selectData,
           key: key,
