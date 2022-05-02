@@ -24,7 +24,6 @@ class H1 extends StatefulWidget {
 
 /// Displays text is a H1 bootstrap style
 class H1State extends State<H1> {
-
   /// used to determine what function to use to set the text size based
   /// on the screen size, unless a custom function uses something else
   double _customBreakpointsValue(BuildContext context, textType) {

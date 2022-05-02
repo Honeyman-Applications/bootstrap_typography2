@@ -62,10 +62,13 @@ class BSSelectParams {
   TextBaseline? textBaseline;
   double? wordSpacing;
   double Function(
-      BuildContext context, // Build Context used to build text widget
-      String textType, { // p, or h1-h6
-      required double small, // default BSBreakPoints value unless textSizeSmall is passed
-      required double large, // default BSBreakPoints value unless textSizeLarge is passed
+    BuildContext context, // Build Context used to build text widget
+    String textType, {
+    // p, or h1-h6
+    required double
+        small, // default BSBreakPoints value unless textSizeSmall is passed
+    required double
+        large, // default BSBreakPoints value unless textSizeLarge is passed
   })? customBreakpoints;
 
   BSSelectParams(
