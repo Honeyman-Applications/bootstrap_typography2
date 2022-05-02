@@ -24,6 +24,65 @@ class H1 extends StatefulWidget {
 
 /// Displays text is a H1 bootstrap style
 class H1State extends State<H1> {
+
+  /// used to determine what function to use to set the text size based
+  /// on the screen size, unless a custom function uses something else
+  double _customBreakpointsValue(BuildContext context, textType) {
+    // set small and large size values based on if select or text params passed
+    double small;
+    double large;
+    bool customBreakpointsPassed;
+    bool textParamsUsed = false;
+    if (widget.textData != null) {
+      small = widget.textData!.textSizeSmall;
+      large = widget.textData!.textSizeLarge;
+      customBreakpointsPassed = widget.textData!.customBreakpoints != null;
+      textParamsUsed = true;
+    } else {
+      small = widget.selectData!.textSizeSmall;
+      large = widget.selectData!.textSizeLarge;
+      customBreakpointsPassed = widget.selectData!.customBreakpoints != null;
+    }
+
+    // if return value from custom function if passed
+    if (customBreakpointsPassed) {
+      // if no small passed use default
+      if (small == -1) {
+        small = BSBreakPoints.textTypesAndSizes[textType]!["sm"]!;
+      }
+
+      // if no large passed use default
+      if (large == -1) {
+        large = BSBreakPoints.textTypesAndSizes[textType]!["lg"]!;
+      }
+
+      // use custom function from correct param object
+      if (textParamsUsed) {
+        return widget.textData!.customBreakpoints!(
+          context,
+          textType,
+          small: small,
+          large: large,
+        );
+      }
+      return widget.selectData!.customBreakpoints!(
+        context,
+        textType,
+        small: small,
+        large: large,
+      );
+
+      // return BSBreakPoints default values if no custom function passed
+    } else {
+      return BSBreakPoints.getTextFontSize(
+        context,
+        textType,
+        small: small,
+        large: large,
+      );
+    }
+  }
+
   /// returns a text object, textData must not be null if this is called
   Text _text(BuildContext context, String textType) {
     return Text(
@@ -65,12 +124,8 @@ class H1State extends State<H1> {
         shadows: widget.textData!.shadows,
         textBaseline: widget.textData!.textBaseline,
         wordSpacing: widget.textData!.wordSpacing,
-        fontSize: BSBreakPoints.getTextFontSize(
-          context,
-          textType,
-          small: widget.textData!.textSizeSmall,
-          large: widget.textData!.textSizeLarge,
-        ),
+        // use custom breakpoint function if passed otherwise default
+        fontSize: _customBreakpointsValue(context, textType),
       ),
     );
   }
@@ -130,12 +185,8 @@ class H1State extends State<H1> {
         shadows: widget.selectData!.shadows,
         textBaseline: widget.selectData!.textBaseline,
         wordSpacing: widget.selectData!.wordSpacing,
-        fontSize: BSBreakPoints.getTextFontSize(
-          context,
-          textType,
-          small: widget.selectData!.textSizeSmall,
-          large: widget.selectData!.textSizeLarge,
-        ),
+        // use custom breakpoint function if passed otherwise default
+        fontSize: _customBreakpointsValue(context, textType),
       ),
     );
   }

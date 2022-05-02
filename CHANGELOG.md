@@ -1,3 +1,9 @@
+## 2.1.0
+
+- added ```customBreakpoints``` function to ```BSTextParams``` and ```BSSelectParams```
+    - allows custom logic to determine how to set the size of text to small or large
+    - if not passed the default values provided by ```BSBreakPoints.getTextFontSize```
+
 ## 2.0.0
 
 - Now can make text selectable, or regular based on data object passed

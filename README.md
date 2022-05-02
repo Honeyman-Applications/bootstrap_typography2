@@ -14,7 +14,7 @@
   ### YAML:
   ```yaml
   dependencies:
-    bootstrap_typography2: ^2.0.0
+    bootstrap_typography2: ^2.1.0
     
   ```
   ### Dart:
@@ -46,6 +46,26 @@ H2(
     ),
 );
   ```
+```dart
+H3(
+  textData: BSTextParams(
+    "Custom Breakpoints, and Sizes",
+    textSizeSmall: 16,
+    textSizeLarge: 32,
+    customBreakpoints: (
+      context,
+      textType, {
+      required large,
+      required small,
+    }) {
+      if (MediaQuery.of(context).size.width > 500) {
+        return large;
+      }
+      return small;
+    },
+  ),
+),
+```
 ### Simple Selectable Examples:
 ```dart
 P(selectData: BSSelectParams("H1S"));
@@ -68,6 +88,26 @@ H2(
     ),
 );
   ```
+```dart
+H3(
+  selectData: BSSelectParams(
+    "Custom Breakpoints, and Sizes",
+    textSizeSmall: 16,
+    textSizeLarge: 32,
+    customBreakpoints: (
+      context,
+      textType, {
+      required large,
+      required small,
+    }) {
+      if (MediaQuery.of(context).size.width > 500) {
+        return large;
+      }
+      return small;
+    },
+  ),
+),
+```
 
   ## Supports:
   Can't pass both ```textData:``` and ```selectData:```
@@ -131,6 +171,12 @@ H2(
   double? textScaleFactor;
   TextWidthBasis? textWidthBasis;
   Key? textKey;
+  double Function(
+      BuildContext context, // Build Context used to build text widget
+      String textType, { // p, or h1-h6
+      required double small, // default BSBreakPoints value unless textSizeSmall is passed
+      required double large, // default BSBreakPoints value unless textSizeLarge is passed
+  })? customBreakpoints;
 ```
 ## Can Set Text Parameters Using BSSelectParams:
 ### Selectable Text:
@@ -190,14 +236,20 @@ H2(
   List<Shadow>? shadows;
   TextBaseline? textBaseline;
   double? wordSpacing;
+  double Function(
+      BuildContext context, // Build Context used to build text widget
+      String textType, { // p, or h1-h6
+      required double small, // default BSBreakPoints value unless textSizeSmall is passed
+      required double large, // default BSBreakPoints value unless textSizeLarge is passed
+  })? customBreakpoints;
 ```
 
 ## Text Sizes:
-  Small falls under screen sizes that are defined bootstrap_like_breakpoints for
+  Small falls under screen sizes that are defined bootstrap_like_breakpoints for the below, unless ```customBreakpoints``` is passed
   - '',
   - 'sm'
 
-  Large falls under screen sizes that are defined bootstrap_like_breakpoints for
+  Large falls under screen sizes that are defined bootstrap_like_breakpoints for the below, unless ```customBreakpoints``` is passed
   - 'md',
   - 'lg',
   - 'xl'

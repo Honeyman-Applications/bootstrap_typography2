@@ -37,6 +37,24 @@ void main() {
                   textSizeLarge: 82,
                 ),
               ),
+              H3(
+                textData: BSTextParams(
+                  "Custom Breakpoints, and Sizes",
+                  textSizeSmall: 16,
+                  textSizeLarge: 32,
+                  customBreakpoints: (
+                    context,
+                    textType, {
+                    required large,
+                    required small,
+                  }) {
+                    if (MediaQuery.of(context).size.width > 500) {
+                      return large;
+                    }
+                    return small;
+                  },
+                ),
+              ),
               //
               H1(
                 selectData: BSSelectParams("H1"),
@@ -64,6 +82,24 @@ void main() {
                   "Custom",
                   textSizeSmall: 16,
                   textSizeLarge: 82,
+                ),
+              ),
+              H3(
+                selectData: BSSelectParams(
+                  "Custom Breakpoints, and Sizes",
+                  textSizeSmall: 16,
+                  textSizeLarge: 32,
+                  customBreakpoints: (
+                    context,
+                    textType, {
+                    required large,
+                    required small,
+                  }) {
+                    if (MediaQuery.of(context).size.width > 500) {
+                      return large;
+                    }
+                    return small;
+                  },
                 ),
               ),
             ],
