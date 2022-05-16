@@ -1,6 +1,6 @@
 name: bootstrap_typography2
 description: Bootstrap typography, size text based on screen size, uses bootstrap values in pixels
-version: 2.1.0
+version: 2.1.1
 repository: https://github.com/Honeyman-Applications/bootstrap_typography2
 
 environment:

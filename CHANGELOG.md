@@ -1,3 +1,7 @@
+## 2.1.1
+
+- Updated license to MIT to add better freedom to the code
+
 ## 2.1.0
 
 - added ```customBreakpoints``` function to ```BSTextParams``` and ```BSSelectParams```
